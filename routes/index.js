@@ -4,11 +4,15 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   // req: lo que enviamos, res: lo que recibimos
-  res.send('Inicio');
+  res.render('Inicio');
 });
 
 router.get('/nosotros', (req, res) => {
-  res.render('Nosotros');
+  const viajes = 'Viaje a Alemania';
+
+  res.render('Nosotros', {
+    viajes,
+  });
 });
 
 router.get('/contacto', (req, res) => {
