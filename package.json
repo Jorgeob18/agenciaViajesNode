@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Jorgeob18/agenciaViajesNode.git"
   },
+  "type": "module",
   "author": "Jorge ortiz",
   "license": "ISC",
   "bugs": {
