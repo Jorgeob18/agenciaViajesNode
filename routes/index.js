@@ -4,14 +4,29 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   // req: lo que enviamos, res: lo que recibimos
-  res.render('Inicio');
+  res.render('Inicio', {
+    pagina: 'Home',
+  });
 });
 
 router.get('/nosotros', (req, res) => {
-  const viajes = 'Viaje a Alemania';
+  // req: lo que enviamos, res: lo que recibimos
+  res.render('nosotros', {
+    pagina: 'Nosotros',
+  });
+});
 
-  res.render('Nosotros', {
-    viajes,
+router.get('/viajes', (req, res) => {
+  // req: lo que enviamos, res: lo que recibimos
+  res.render('viajes', {
+    pagina: 'Viajes',
+  });
+});
+
+router.get('/testimoniales', (req, res) => {
+  // req: lo que enviamos, res: lo que recibimos
+  res.render('testimoniales', {
+    pagina: 'Testimoniales',
   });
 });
 
