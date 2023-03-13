@@ -3,4 +3,30 @@ extends ./layout/index
 block contenido
   main.container.mt-5
     .row
-      h1= pagina
+      .col-md-5 
+        img(src="img/nosotros.jpg", alt="imagen sobre nosotros", class="img-fluid")
+      .col-md-7
+        h1= pagina
+        blockquote  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta scelerisque mi, a aliquet dui egestas non. Vestibulum non sem lacus. Mauris vitae eleifend risus. Donec vitae feugiat dui. Integer vestibulum nulla ut nisl sagittis aliquet. Nam molestie eros in nulla posuere, eget vulputate diam volutpat. Cras interdum id magna et molestie.
+
+        p Fusce vulputate felis sed sem semper, ac posuere tellus hendrerit. Vestibulum cursus turpis eros, ac tincidunt lacus blandit vel. Nunc accumsan dignissim venenatis. Donec tincidunt iaculis orci, sit amet dignissim nibh dapibus nec. Maecenas pulvinar, lacus vel sodales dapibus, lacus mi luctus velit, eget laoreet mi nisi ac orci. 
+
+        p Curabitur erat dui, lobortis eget cursus sed, aliquet ac enim. Donec ac justo diam. Mauris bibendum velit ac lorem vestibulum, ac facilisis urna fringilla. Pellentesque gravida mollis pretium. 
+  
+  .listado-iconos 
+    .container.mt-5.py-5.text-center 
+      .row
+        .col-md-4
+          img(src="img/icono_seguridad.svg", alt="icono seguridad" class="img-fluid mb-4")
+          h2.mb-4 Seguridad
+          p Sed feugiat ligula id varius efficitur. Ut eget ante vel lectus vestibulum hendrerit a sed magna. Etiam pulvinar, ipsum quis convallis mattis, elit lectus sodales ligula, ac pretium dui massa ac libero. Donec sed enim sit amet justo cursus consequat quis et nisi.
+
+        .col-md-4
+          img(src="img/icono_destinos.svg", alt="icono destinos" class="img-fluid mb-4")
+          h2.mb-4 Destinos
+          p Sed feugiat ligula id varius efficitur. Ut eget ante vel lectus vestibulum hendrerit a sed magna. Etiam pulvinar, ipsum quis convallis mattis, elit lectus sodales ligula, ac pretium dui massa ac libero. Donec sed enim sit amet justo cursus consequat quis et nisi.
+        
+        .col-md-4
+          img(src="img/icono_precios.svg", alt="icono precios" class="img-fluid mb-4")
+          h2.mb-4 Precios
+          p Sed feugiat ligula id varius efficitur. Ut eget ante vel lectus vestibulum hendrerit a sed magna. Etiam pulvinar, ipsum quis convallis mattis, elit lectus sodales ligula, ac pretium dui massa ac libero. Donec sed enim sit amet justo cursus consequat quis et nisi.
