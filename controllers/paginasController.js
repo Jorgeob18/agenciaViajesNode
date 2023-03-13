@@ -1,3 +1,4 @@
+import { Viaje } from '../models/Viajes.js';
 const paginaInicio = (req, res) => {
   // req: lo que enviamos, res: lo que recibimos
   res.render('Inicio', {
@@ -12,10 +13,15 @@ const paginaNosotros = (req, res) => {
   });
 };
 
-const paginaViajes = (req, res) => {
-  // req: lo que enviamos, res: lo que recibimos
+const paginaViajes = async (req, res) => {
+  // Consultar DB
+  const viajes = await Viaje.findAll();
+
+  console.log(viajes);
+
   res.render('viajes', {
-    pagina: 'Viajes',
+    pagina: 'Próximos Viajes',
+    viajes: viajes,
   });
 };
 
