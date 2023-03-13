@@ -2,8 +2,18 @@
 
 import express from 'express'; // Se agrega "type": "module", en package.json para utilizar import y export
 import router from './routes/index.js';
+import db from './config/db.js';
 
 const app = express();
+
+// Conectar la BDD
+db.authenticate()
+  .then(() => {
+    console.log('Base de datos conectada');
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // Definir puertp
 const port = process.env.PORT || 4000;
