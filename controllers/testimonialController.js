@@ -12,7 +12,18 @@ const guardarTestimonial = (req, res) => {
     errores.push({ mensaje: 'El mensaje esta vacio' });
   }
 
-  console.log(errores);
+  if (errores.length > 0) {
+    // Mostrar la vista con errores
+    res.render('testimoniales', {
+      pagina: 'Testimoniales',
+      errores,
+      nombre,
+      correo,
+      mensaje,
+    });
+  } else {
+    // Almacenarlo en la BDD
+  }
 };
 
 export { guardarTestimonial };
