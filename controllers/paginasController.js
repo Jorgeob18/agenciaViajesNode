@@ -1,4 +1,6 @@
 import { Viaje } from '../models/Viajes.js';
+import { Testimonial } from '../models/Testimoniales.js';
+
 const paginaInicio = (req, res) => {
   // req: lo que enviamos, res: lo que recibimos
   res.render('Inicio', {
@@ -25,11 +27,16 @@ const paginaViajes = async (req, res) => {
   });
 };
 
-const paginaTestimoniales = (req, res) => {
-  // req: lo que enviamos, res: lo que recibimos
-  res.render('testimoniales', {
-    pagina: 'Testimoniales',
-  });
+const paginaTestimoniales = async (req, res) => {
+  try {
+    const testimoniales = await Testimonial.findAll();
+    res.render('testimoniales', {
+      pagina: 'Testimoniales',
+      testimoniales,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // Muestra un viaje por su Slug
