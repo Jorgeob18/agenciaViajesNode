@@ -29,7 +29,7 @@ const paginaViajes = async (req, res) => {
 
 const paginaTestimoniales = async (req, res) => {
   try {
-    const testimoniales = await Testimonial.findAll();
+    const testimoniales = await Testimonial.findAll({ limit: 6 });
     res.render('testimoniales', {
       pagina: 'Testimoniales',
       testimoniales,
